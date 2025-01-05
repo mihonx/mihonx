@@ -1,0 +1,15 @@
+[versions]
+android-gradle = "8.7.3"
+kotlin = "2.1.0"
+ktlint = "1.5.0"
+maven-publish = "0.30.0"
+spotless = "7.0.0.BETA4"
+
+[libraries]
+ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlint" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "android-gradle" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
