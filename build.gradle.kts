@@ -18,12 +18,12 @@ spotless {
     kotlin {
         target("src/**/*.kt")
         ktlint(ktlintVersion)
-        licenseHeaderFile(rootProject.file("spotless/copyright.kt.txt"))
+        licenseHeaderFile(rootProject.file("spotless/copyright.kt"))
     }
 
     kotlinGradle {
         target("*.kts")
         ktlint(ktlintVersion)
-        licenseHeaderFile(rootProject.file("spotless/copyright.kt.txt"), "(^(?![\\/ ]\\**).*$)")
+        licenseHeaderFile(rootProject.file("spotless/copyright.kt"), "(^(?![\\/ ]\\**).*$)")
     }
 }
