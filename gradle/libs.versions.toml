@@ -1,5 +1,5 @@
 [versions]
-android-gradle = "8.7.3"
+android-gradle = "8.8.0"
 kotlin = "2.1.0"
 ktlint = "1.5.0"
 maven-publish = "0.30.0"
