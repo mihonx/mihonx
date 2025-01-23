@@ -7,10 +7,7 @@
  */
 package mihonx
 
-import mihonx.source.Source
-
 /**
- * Base extension class. See [Source]
+ * Context object to pass reference from App to [Extension]
  */
-@Suppress("UNUSED_PARAMETER")
-abstract class Extension(context: ExtensionContext)
+interface ExtensionContext

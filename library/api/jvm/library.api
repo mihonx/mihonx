@@ -1,3 +1,50 @@
-public abstract interface class mihonx/Extension {
+public abstract class mihonx/Extension {
+	public fun <init> (Lmihonx/ExtensionContext;)V
+}
+
+public abstract interface class mihonx/ExtensionContext {
+}
+
+public abstract class mihonx/source/Source : mihonx/Extension {
+	public fun <init> (Lmihonx/ExtensionContext;)V
+	public abstract fun getChapterPages (Lmihonx/source/model/Chapter;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getHasSearchFilters ()Z
+	public abstract fun getHomeComponents (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getId ()J
+	public abstract fun getLanguage ()Ljava/lang/String;
+	public abstract fun getListings (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getMangaDetails (Lmihonx/source/model/Manga;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getMangaList (Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getMangaList (Lmihonx/source/model/Listing;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getName ()Ljava/lang/String;
+	public abstract fun getSearchFilters (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class mihonx/source/Source$Language {
+	public static final field INSTANCE Lmihonx/source/Source$Language;
+	public static final field MULTI Ljava/lang/String;
+	public static final field OTHER Ljava/lang/String;
+}
+
+public final class mihonx/source/model/Chapter {
+	public fun <init> ()V
+}
+
+public final class mihonx/source/model/Filter {
+	public fun <init> ()V
+}
+
+public abstract interface class mihonx/source/model/HomeComponent {
+}
+
+public final class mihonx/source/model/Listing {
+	public fun <init> ()V
+}
+
+public final class mihonx/source/model/Manga {
+	public fun <init> ()V
+}
+
+public abstract interface class mihonx/source/model/Page {
 }
 
