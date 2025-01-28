@@ -1,9 +1,9 @@
 [versions]
-android-gradle = "8.7.3"
-kotlin = "2.1.0"
+android-gradle = "8.8.0"
+kotlin = "2.1.10"
 ktlint = "1.5.0"
 maven-publish = "0.30.0"
-spotless = "7.0.0"
+spotless = "7.0.2"
 
 [libraries]
 ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlint" }
