@@ -1,3 +1,26 @@
 public abstract interface class mihonx/Extension {
 }
 
+public final class mihonx/source/model/Chapter {
+	public fun <init> (Ljava/lang/String;FFLjava/lang/String;JLjava/util/List;Lmihonx/source/model/ChapterLockStatus;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;FFLjava/lang/String;JLjava/util/List;Lmihonx/source/model/ChapterLockStatus;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAuxiliaryData ()Ljava/lang/String;
+	public final fun getDateUpload ()J
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getLockStatus ()Lmihonx/source/model/ChapterLockStatus;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getNumber ()F
+	public final fun getScanlators ()Ljava/util/List;
+	public final fun getVolume ()F
+}
+
+public final class mihonx/source/model/ChapterLockStatus : java/lang/Enum {
+	public static final field LOCKED Lmihonx/source/model/ChapterLockStatus;
+	public static final field NONE Lmihonx/source/model/ChapterLockStatus;
+	public static final field UNLOCKED Lmihonx/source/model/ChapterLockStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun isLocked ()Z
+	public static fun valueOf (Ljava/lang/String;)Lmihonx/source/model/ChapterLockStatus;
+	public static fun values ()[Lmihonx/source/model/ChapterLockStatus;
+}
+
