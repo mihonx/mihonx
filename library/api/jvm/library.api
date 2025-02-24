@@ -8,8 +8,6 @@ public abstract interface class mihonx/ExtensionContext {
 public abstract class mihonx/source/Source : mihonx/Extension {
 	public fun <init> (Lmihonx/ExtensionContext;)V
 	public abstract fun getChapterPages (Lmihonx/source/model/Chapter;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun getHasSearchFilters ()Z
-	public abstract fun getHomeComponents (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getId ()J
 	public abstract fun getLanguage ()Ljava/lang/String;
 	public abstract fun getListings (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -32,9 +30,6 @@ public final class mihonx/source/model/Chapter {
 
 public final class mihonx/source/model/Filter {
 	public fun <init> ()V
-}
-
-public abstract interface class mihonx/source/model/HomeComponent {
 }
 
 public final class mihonx/source/model/Listing {

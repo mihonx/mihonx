@@ -11,7 +11,6 @@ import mihonx.Extension
 import mihonx.ExtensionContext
 import mihonx.source.model.Chapter
 import mihonx.source.model.Filter
-import mihonx.source.model.HomeComponent
 import mihonx.source.model.Listing
 import mihonx.source.model.Manga
 import mihonx.source.model.Page
@@ -44,13 +43,6 @@ abstract class Source(context: ExtensionContext) : Extension(context) {
     abstract val language: String
 
     /**
-     * Indicates whether the source has search filters
-     *
-     * @since 1.0.0
-     */
-    abstract val hasSearchFilters: Boolean
-
-    /**
      * An ordered list of [Listing] applicable for the source
      *
      * @since 1.0.0
@@ -64,13 +56,6 @@ abstract class Source(context: ExtensionContext) : Extension(context) {
      */
     abstract suspend fun getSearchFilters(): List<Filter>
 
-    /**
-     * An ordered list of components to construct the Home screen of a source
-     *
-     * @since 1.0.0
-     */
-    abstract suspend fun getHomeComponents(): List<HomeComponent>
-
     // TODO: Appropriate description
     /**
      * @since 1.0.0
@@ -83,7 +68,7 @@ abstract class Source(context: ExtensionContext) : Extension(context) {
      * @since 1.0.0
      */
     // TODO: Formulate the return type. Should be something like 'androidx.paging.PagingSource'
-    abstract suspend fun getMangaList(query: String, filters: List<Filter>)
+    abstract suspend fun getMangaList(query: String, filters: List<Filter>?)
 
     /**
      * Get the updated details for a manga and its chapters
