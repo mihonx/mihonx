@@ -5,12 +5,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-package mihonx
-
-import mihonx.source.Source
+package mihonx.source.model
 
 /**
- * Base extension class. See [Source]
+ * Indicates an ordered list of [Manga] (e.g. Alphabetical, Popular etc.)
+ *
+ * @since 1.0.0
  */
-@Suppress("UNUSED_PARAMETER")
-abstract class Extension(context: ExtensionContext)
+class Listing
