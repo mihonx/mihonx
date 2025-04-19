@@ -5,10 +5,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-import com.android.build.api.dsl.androidLibrary
-
 plugins {
-    alias(libs.plugins.kotlin.android.library)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.maven.publish)
     alias(libs.plugins.spotless)
@@ -17,12 +15,18 @@ plugins {
 kotlin {
     jvmToolchain(17)
 
-    androidLibrary {
-        namespace = "mihonx"
-        compileSdk = 35
-        minSdk = 21
+    androidTarget {
+        publishLibraryVariants("release")
     }
     jvm()
+}
+
+android {
+    namespace = "mihonx"
+    compileSdk = 35
+    defaultConfig {
+        minSdk = 21
+    }
 }
 
 mavenPublishing {
