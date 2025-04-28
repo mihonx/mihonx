@@ -1,3 +1,42 @@
 public abstract interface class mihonx/Extension {
 }
 
+public final class mihonx/source/model/Manga {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lmihonx/source/model/MangaStatus;Ljava/lang/Float;Ljava/lang/String;Ljava/util/List;Lmihonx/source/model/MangaUpdateStrategy;ZLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lmihonx/source/model/MangaStatus;Ljava/lang/Float;Ljava/lang/String;Ljava/util/List;Lmihonx/source/model/MangaUpdateStrategy;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAltTitles ()Ljava/util/List;
+	public final fun getArtists ()Ljava/util/List;
+	public final fun getAuthors ()Ljava/util/List;
+	public final fun getAuxiliaryData ()Ljava/lang/String;
+	public final fun getCoverKey ()Ljava/lang/String;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getGenres ()Ljava/util/List;
+	public final fun getInitialized ()Z
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getRating ()Ljava/lang/Float;
+	public final fun getStatus ()Lmihonx/source/model/MangaStatus;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getUpdateStrategy ()Lmihonx/source/model/MangaUpdateStrategy;
+}
+
+public final class mihonx/source/model/MangaStatus : java/lang/Enum {
+	public static final field Cancelled Lmihonx/source/model/MangaStatus;
+	public static final field Completed Lmihonx/source/model/MangaStatus;
+	public static final field Licensed Lmihonx/source/model/MangaStatus;
+	public static final field OnHiatus Lmihonx/source/model/MangaStatus;
+	public static final field Ongoing Lmihonx/source/model/MangaStatus;
+	public static final field PublishingFinished Lmihonx/source/model/MangaStatus;
+	public static final field Unknown Lmihonx/source/model/MangaStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lmihonx/source/model/MangaStatus;
+	public static fun values ()[Lmihonx/source/model/MangaStatus;
+}
+
+public final class mihonx/source/model/MangaUpdateStrategy : java/lang/Enum {
+	public static final field AlwaysUpdate Lmihonx/source/model/MangaUpdateStrategy;
+	public static final field OnlyFetchOnce Lmihonx/source/model/MangaUpdateStrategy;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lmihonx/source/model/MangaUpdateStrategy;
+	public static fun values ()[Lmihonx/source/model/MangaUpdateStrategy;
+}
+
