@@ -1,0 +1,12 @@
+[versions]
+# Used in [/gradle/build-config/src/main/kotlin/PluginKotlinMultiplatform.kt]
+android-sdk-compile = "36"
+android-sdk-min = "23"
+java = "17"
+kotlin = "2.2.20"
+
+[plugins]
+detekt = { id = "mihonx.plugins.detekt" }
+kotlin-multiplatform = { id = "mihonx.plugins.kotlin.multiplatform" }
+maven-publish = { id = "mihonx.plugins.maven.publish" }
+spotless = { id = "mihonx.plugins.spotless" }

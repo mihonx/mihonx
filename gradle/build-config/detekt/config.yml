@@ -1,0 +1,8 @@
+config:
+  validation: true
+
+style:
+  UnusedImports:
+    active: true
+  MaxLineLength:
+    active: false
