@@ -32,3 +32,7 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "MihonX"
+
+include(":mihonx-core")
+include(":mihonx-http-core")
+include(":mihonx-http-ktor")

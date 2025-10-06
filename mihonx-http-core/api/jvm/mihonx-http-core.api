@@ -1,0 +1,4 @@
+public abstract interface class mihonx/http/HttpClient {
+	public abstract fun get (Ljava/lang/String;)V
+}
+

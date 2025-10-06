@@ -1,0 +1,5 @@
+public final class mihonx/http/ktor/KtorHttpClient : mihonx/http/HttpClient {
+	public fun <init> ()V
+	public fun get (Ljava/lang/String;)V
+}
+

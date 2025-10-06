@@ -1,0 +1,4 @@
+public abstract interface class mihonx/ExtensionContext {
+	public abstract fun getHttpClient ()Lmihonx/http/HttpClient;
+}
+
