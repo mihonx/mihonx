@@ -1,7 +1,7 @@
 [versions]
 android-desugar = "2.1.5"
 android-gradle = "8.13.0"
-compatPatrouille = "0.0.3"
+compatPatrouille = "0.1.0"
 detekt = "1.23.8"
 kotlin-gradle = "2.2.20"
 ktlint = "1.7.1"
