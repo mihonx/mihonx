@@ -29,5 +29,11 @@ jobs:
         with:
           cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
 
+      - name: API Dump File Check
+        run: ./gradlew checkLegacyAbi
+
       - name: Code Quality Check
         run: ./gradlew detekt spotlessCheck
+
+      - name: Build Check
+        run: ./gradlew publishToMavenLocal

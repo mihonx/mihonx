@@ -32,3 +32,4 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "MihonX"
+include(":mihonx-core")
