@@ -1,0 +1,155 @@
+public abstract interface class mihonx/tracker/Tracker {
+	public abstract fun get (Ljava/lang/String;)Lmihonx/tracker/models/TrackState;
+	public abstract fun getCapabilities ()Ljava/util/List;
+	public abstract fun getId ()Ljava/lang/String;
+	public abstract fun getName ()Ljava/lang/String;
+	public abstract fun getScoreType ()Lmihonx/tracker/models/TrackScoreType;
+	public abstract fun getSupportedStatuses ()Ljava/util/List;
+	public abstract fun search (Ljava/lang/String;Z)Ljava/util/List;
+	public abstract fun track (Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;Lkotlin/time/Instant;Z)Lmihonx/tracker/models/TrackState;
+	public abstract fun update (Ljava/lang/String;Lmihonx/tracker/models/TrackUpdate;)Lmihonx/tracker/models/TrackState;
+}
+
+public final class mihonx/tracker/Tracker$Capability : java/lang/Enum {
+	public static final field PrivateTracking Lmihonx/tracker/Tracker$Capability;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lmihonx/tracker/Tracker$Capability;
+	public static fun values ()[Lmihonx/tracker/Tracker$Capability;
+}
+
+public abstract class mihonx/tracker/models/TrackScoreType {
+	public fun <init> ()V
+	public abstract fun fromPercentile (I)Ljava/lang/String;
+	public abstract fun getOptions ()Ljava/util/List;
+	public abstract fun toPercentile (Ljava/lang/String;)I
+}
+
+public final class mihonx/tracker/models/TrackScoreType$FiveStar : mihonx/tracker/models/TrackScoreType {
+	public static final field INSTANCE Lmihonx/tracker/models/TrackScoreType$FiveStar;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun fromPercentile (I)Ljava/lang/String;
+	public fun getOptions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toPercentile (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class mihonx/tracker/models/TrackScoreType$HundredPoint : mihonx/tracker/models/TrackScoreType {
+	public static final field INSTANCE Lmihonx/tracker/models/TrackScoreType$HundredPoint;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun fromPercentile (I)Ljava/lang/String;
+	public fun getOptions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toPercentile (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class mihonx/tracker/models/TrackScoreType$Smiley : mihonx/tracker/models/TrackScoreType {
+	public static final field INSTANCE Lmihonx/tracker/models/TrackScoreType$Smiley;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun fromPercentile (I)Ljava/lang/String;
+	public fun getOptions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toPercentile (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class mihonx/tracker/models/TrackScoreType$TenPoint : mihonx/tracker/models/TrackScoreType {
+	public static final field INSTANCE Lmihonx/tracker/models/TrackScoreType$TenPoint;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun fromPercentile (I)Ljava/lang/String;
+	public fun getOptions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toPercentile (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class mihonx/tracker/models/TrackScoreType$TenPointDecimal : mihonx/tracker/models/TrackScoreType {
+	public static final field INSTANCE Lmihonx/tracker/models/TrackScoreType$TenPointDecimal;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun fromPercentile (I)Ljava/lang/String;
+	public fun getOptions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toPercentile (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class mihonx/tracker/models/TrackState {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lmihonx/tracker/models/TrackStatus;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lkotlin/time/Instant;Lkotlin/time/Instant;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Lkotlin/time/Instant;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Lmihonx/tracker/models/TrackStatus;
+	public final fun component5 ()Ljava/lang/Double;
+	public final fun component6 ()Ljava/lang/Double;
+	public final fun component7 ()Ljava/lang/Double;
+	public final fun component8 ()Ljava/lang/Double;
+	public final fun component9 ()Lkotlin/time/Instant;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lmihonx/tracker/models/TrackStatus;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lkotlin/time/Instant;Lkotlin/time/Instant;)Lmihonx/tracker/models/TrackState;
+	public static synthetic fun copy$default (Lmihonx/tracker/models/TrackState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lmihonx/tracker/models/TrackStatus;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lkotlin/time/Instant;Lkotlin/time/Instant;ILjava/lang/Object;)Lmihonx/tracker/models/TrackState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChapterProgress ()Ljava/lang/Double;
+	public final fun getFinishDate ()Lkotlin/time/Instant;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLibraryId ()Ljava/lang/String;
+	public final fun getScore ()Ljava/lang/Integer;
+	public final fun getStartDate ()Lkotlin/time/Instant;
+	public final fun getStatus ()Lmihonx/tracker/models/TrackStatus;
+	public final fun getTotalChapters ()Ljava/lang/Double;
+	public final fun getTotalVolumes ()Ljava/lang/Double;
+	public final fun getVolumeProgress ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class mihonx/tracker/models/TrackStatus : java/lang/Enum {
+	public static final field Completed Lmihonx/tracker/models/TrackStatus;
+	public static final field Dropped Lmihonx/tracker/models/TrackStatus;
+	public static final field Paused Lmihonx/tracker/models/TrackStatus;
+	public static final field Planning Lmihonx/tracker/models/TrackStatus;
+	public static final field Reading Lmihonx/tracker/models/TrackStatus;
+	public static final field Rereading Lmihonx/tracker/models/TrackStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lmihonx/tracker/models/TrackStatus;
+	public static fun values ()[Lmihonx/tracker/models/TrackStatus;
+}
+
+public abstract interface class mihonx/tracker/models/TrackUpdate {
+	public static final field Companion Lmihonx/tracker/models/TrackUpdate$Companion;
+	public abstract fun getChapterProgress ()Lmihonx/tracker/models/TrackUpdate$Field;
+	public abstract fun getFinishDate ()Lmihonx/tracker/models/TrackUpdate$Field;
+	public abstract fun getPrivate ()Lmihonx/tracker/models/TrackUpdate$Field;
+	public abstract fun getScore ()Lmihonx/tracker/models/TrackUpdate$Field;
+	public abstract fun getStartDate ()Lmihonx/tracker/models/TrackUpdate$Field;
+	public abstract fun getStatus ()Lmihonx/tracker/models/TrackUpdate$Field;
+	public abstract fun getVolumeProgress ()Lmihonx/tracker/models/TrackUpdate$Field;
+}
+
+public final class mihonx/tracker/models/TrackUpdate$Companion {
+	public final fun invoke (Lkotlin/jvm/functions/Function1;)Lmihonx/tracker/models/TrackUpdate;
+}
+
+public final class mihonx/tracker/models/TrackUpdate$Field {
+	public fun <init> (Ljava/lang/Object;)V
+	public final fun getValue ()Ljava/lang/Object;
+}
+
+public final class mihonx/tracker/models/TrackUpdateBuilder {
+	public final fun build ()Lmihonx/tracker/models/TrackUpdate;
+	public final fun getChapterProgress ()Ljava/lang/Double;
+	public final fun getFinishDate ()Lkotlin/time/Instant;
+	public final fun getPrivate ()Ljava/lang/Boolean;
+	public final fun getScore ()Ljava/lang/Integer;
+	public final fun getStartDate ()Lkotlin/time/Instant;
+	public final fun getStatus ()Lmihonx/tracker/models/TrackStatus;
+	public final fun getVolumeProgress ()Ljava/lang/Double;
+	public final fun setChapterProgress (Ljava/lang/Double;)V
+	public final fun setFinishDate (Lkotlin/time/Instant;)V
+	public final fun setPrivate (Ljava/lang/Boolean;)V
+	public final fun setScore (Ljava/lang/Integer;)V
+	public final fun setStartDate (Lkotlin/time/Instant;)V
+	public final fun setStatus (Lmihonx/tracker/models/TrackStatus;)V
+	public final fun setVolumeProgress (Ljava/lang/Double;)V
+}
+
