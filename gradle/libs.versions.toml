@@ -6,7 +6,7 @@ detekt = "1.23.8"
 kotlin-gradle = "2.2.20"
 ktlint = "1.7.1"
 maven-publish = "0.34.0"
-spotless = "8.0.0"
+spotless = "8.1.0"
 
 [libraries]
 android-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-gradle" }
