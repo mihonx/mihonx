@@ -13,6 +13,7 @@ plugins {
     alias(mihonx.plugins.kotlin.multiplatform)
     alias(mihonx.plugins.maven.publish)
     alias(mihonx.plugins.spotless)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -23,5 +24,6 @@ kotlin {
     @OptIn(ExperimentalKotlinGradlePluginApi::class)
     dependencies {
         implementation(libs.kotlinx.coroutines.core)
+        implementation(libs.kotlinx.serialization.json)
     }
 }

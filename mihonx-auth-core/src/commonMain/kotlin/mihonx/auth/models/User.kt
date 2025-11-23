@@ -1,5 +1,8 @@
 package mihonx.auth.models
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 public data class User(
     val id: String,
     val name: String,
