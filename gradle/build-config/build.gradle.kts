@@ -42,11 +42,11 @@ detekt {
 dependencies {
     compileOnly(gradleKotlinDsl())
     implementation(libs.android.gradle)
-    implementation(libs.compatPatrouille.gradle)
     implementation(libs.detekt.gradle)
     implementation(libs.kotlin.gradle)
     implementation(libs.maven.publish.gradle)
     implementation(libs.spotless.gradle)
+    implementation(libs.tapmoc.gradle)
 
     // These allow us to reference the dependency catalog inside of our compiled plugins
     compileOnly(files(libs::class.java.superclass.protectionDomain.codeSource.location))

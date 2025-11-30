@@ -9,8 +9,6 @@
  */
 import com.android.build.api.dsl.KotlinMultiplatformAndroidCompilation
 import com.android.build.api.dsl.androidLibrary
-import compat.patrouille.configureJavaCompatibility
-import compat.patrouille.configureKotlinCompatibility
 import mihonx.gradle.extensions.alias
 import mihonx.gradle.extensions.coreLibraryDesugaring
 import mihonx.gradle.extensions.libs
@@ -23,9 +21,9 @@ import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.dsl.abi.AbiValidationMultiplatformExtension
-import org.jetbrains.kotlin.gradle.dsl.abi.AbiValidationMultiplatformVariantSpec
-import org.jetbrains.kotlin.gradle.dsl.abi.AbiValidationVariantSpec
 import org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation
+import tapmoc.configureJavaCompatibility
+import tapmoc.configureKotlinCompatibility
 
 internal class PluginKotlinMultiplatform : Plugin<Project> {
     override fun apply(target: Project): Unit = with(target) {
@@ -92,9 +90,4 @@ private fun Project.kotlin(block: KotlinMultiplatformExtension.() -> Unit) {
 
 private fun KotlinMultiplatformExtension.abiValidation(block: AbiValidationMultiplatformExtension.() -> Unit) {
     extensions.configure(block)
-}
-
-@OptIn(ExperimentalAbiValidation::class)
-private fun AbiValidationMultiplatformExtension.klib(block: AbiValidationMultiplatformVariantSpec.() -> Unit) {
-    variants.getByName(AbiValidationVariantSpec.MAIN_VARIANT_NAME).block()
 }
