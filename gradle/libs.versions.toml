@@ -2,7 +2,7 @@
 android-desugar = "2.1.5"
 android-gradle = "8.13.1"
 detekt = "1.23.8"
-kotlin-gradle = "2.2.21"
+kotlin-gradle = "2.4.0"
 ktlint = "1.8.0"
 maven-publish = "0.35.0"
 spotless = "8.1.0"
